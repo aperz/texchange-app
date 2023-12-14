@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Gaming Social Meetings</title>
+</head>
+<body>
+    <h1>Welcome to Gaming Social Meetings</h1>
+
+
+    <!-- User Registration -->
+    <div id="registration_form">
+        <input type="text" id="username" placeholder="Enter Username">
+<!--        <button onclick="registerUser()">Register</button>-->
+<!--    </div>-->
+<!--    -->
+<!--    &lt;!&ndash; Join Group &ndash;&gt;-->
+<!--    <div>-->
+        <input type="text" id="group_id" placeholder="Enter Group ID">
+        <button onclick="joinGroup()">Join Group</button>
+    </div>
+
+    <div id="user_screen" style="display: none;">
+        <h2>Welcome, <span id="user_name"></span>!</h2>
+        <p>This is your user screen.</p>
+        <button onclick="logoutUser()">Logout & Go Back</button>
+        <h3>Selected Group: <span id="selected_group_id"></span></h3>
+        <p>Members: <span id="group_members"></span></p>
+    </div>
+
+
+    <button id="show_admin_panel_button" onclick="showAdminPanel()">Show Admin Panel</button>
+
+    <div id="admin_panel" style="display: none;">
+        <input type="text" id="new_group_id" placeholder="Enter Group Name">
+        <button onclick="createGroup()">Create Group</button>
+
+        <button onclick="randomMatch()">Random Match</button>
+        <button onclick="hideAdminPanel()">Hide Admin Panel</button>
+    </div>
+
+
+    <div id="timer">
+        <input type="number" id="time_input" min="1" max="180" placeholder="Enter time (1-180 min)">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="resetTimer()">Reset</button>
+        <div id="time_display">00:00:00</div>
+    </div>
+    <audio id="timer_sound" src="{{ url_for('static', filename='singing-bowl-strike-sound-84682.mp3') }}" preload="auto"></audio>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

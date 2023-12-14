@@ -1,0 +1,55 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+#timer {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type='number'] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e7e0d1;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #a88f5d;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9c7f4a;
+}
+
+button:active {
+    background-color: #8a6f3d;
+}
+
+#time_display {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #6e644b;
+}
+
+audio {
+    display: none;
+}
